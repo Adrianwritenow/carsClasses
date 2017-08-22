@@ -1,11 +1,3 @@
-function massBuild(x, color, trim, model){
-  console.log("Building " + x + " " + color +" " + trim + " " +model+ "'s.")
-};
-
- function customerBuild(x, color, model, trim, options){
-  console.log("Building "+ x +" "+ color +" "+ model +" "+trim+" with the following options: " + options);
-
-};
 
 // CLASSES PROJECT
 // In this project, you will build a Mazda car factory that manufactures both cars and trucks.
@@ -36,6 +28,15 @@ class Factory {
     this.abs = true;
     this.warranty = '60,000 miles / 3 years';
   }
+   massBuild(x){
+    console.log("Building " + x + " " + this.color +" " + this.trim + " " + this.model+ "'s.")
+  };
+
+    customerBuild(color, options){
+    console.log("Building 1 " + color +" "+ this.model +" "+this.trim+" with the following options: " + options);
+
+  };
+
 }
 
 
@@ -143,7 +144,7 @@ console.log(mazda3);
 // It should print: "Building 35000 Red Touring Mazda3's."
 // Write your code below:
 
-massBuild(3500, mazda3.color, mazda3.trim, mazda3.model);
+mazda3.massBuild(3500);
 
 
 
@@ -153,7 +154,7 @@ massBuild(3500, mazda3.color, mazda3.trim, mazda3.model);
 // It should read: "Building one yellow Touring Mazda3 with the following options: weather package, satellite radio, rear spoiler"
 // Write your code below:
 
-customerBuild(1, 'yellow', mazda3.trim, mazda3.model, ["weather package ", " satellite", " radio", " rear spoiler"]);
+mazda3.customerBuild('yellow', ["weather package ", " satellite", " radio", " rear spoiler"]);
 
 
 
@@ -183,7 +184,7 @@ console.log(mitaRf);
 // It should print: "Building 15000 Red Grand Touring Miata-RF's."
 // Write your code below:
 
-massBuild(15000, mitaRf.color, mitaRf.trim, mitaRf.model);
+mitaRf.massBuild(15000);
 
 
 
@@ -193,7 +194,7 @@ massBuild(15000, mitaRf.color, mitaRf.trim, mitaRf.model);
 // It should read: "Building one black Grand Touring Miata-RF with the following options: hid headlights, sports suspension, leather steering wheel, heated seats, adaptive cruise control"
 // Write your code below:
 
-customerBuild(1 , 'black', mitaRf.model, mitaRf.trim, ['hid headlights', 'sports suspension', 'leather steering wheel', 'heated seats', 'adaptive cruise control ']);
+mitaRf.customerBuild('black', ['hid headlights', 'sports suspension', 'leather steering wheel', 'heated seats', 'adaptive cruise control ']);
 
 
 
@@ -220,7 +221,7 @@ console.log(trailBlazer);
 // It should print: "Building 35000 blue Sport Trail Blazer's."
 // Wrint your code below:
 
-massBuild(3500, trailBlazer.color, trailBlazer.trim, trailBlazer.model);
+trailBlazer.massBuild(3500);
 
 
 
@@ -229,4 +230,4 @@ massBuild(3500, trailBlazer.color, trailBlazer.trim, trailBlazer.model);
 // It should print: "Building one red Sport Trail Blazer with the following options: seat warmers, tinted windows, fog lamps"
 // Write your code below:
 
-customerBuild(1, 'red', trailBlazer.trim,trailBlazer.model,["seat warmers", "tinted windows", "fog lamps"]);
+trailBlazer.customerBuild('red',["seat warmers", "tinted windows", "fog lamps"]);
