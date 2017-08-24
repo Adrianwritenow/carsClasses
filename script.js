@@ -21,7 +21,7 @@
 // Create the Factory class bellow:
 
 class Factory {
-  constructor(make, location, airbags, abs, warranty){
+  constructor(){
     this.make = "Mazda";
     this.location = "USA";
     this.airbags = true;
@@ -51,7 +51,7 @@ class Factory {
 
 class Car extends  Factory{
   constructor(color, model, enginetype, transmission, trim, wheelstrim, audio, seatstrim, moonroof,doors, warranty){
-    super(warranty);
+    super();
     this.color =color;
     this.model = model;
     this.enginetype =enginetype;
@@ -107,7 +107,7 @@ class Sport extends Car{
 
 class Truck extends Factory{
   constructor( model, color, trim, enginesize, hitch, bed, navigation, warranty){
-    super(warranty)
+    super()
     this.model = model;
     this.color = color;
     this.trim = trim;
